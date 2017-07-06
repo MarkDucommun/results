@@ -1,0 +1,6 @@
+version '0.0.0'
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile 'net.wuerl.kotlin:assertj-core-kotlin:0.1.3'
+}
