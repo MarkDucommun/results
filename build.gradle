@@ -19,7 +19,6 @@ allprojects {
     }
 
     group 'com.github.MarkDucommun'
-    version '0.1.0'
 
     apply plugin: 'kotlin'
     apply plugin: 'maven-publish'
@@ -37,5 +36,13 @@ allprojects {
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion"
         compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+    }
+
+    publishing {
+        publications {
+            mavenKotlin(MavenPublication) {
+                from components.java
+            }
+        }
     }
 }
