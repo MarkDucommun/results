@@ -1,6 +1,8 @@
 package io.ducommun.results
 
-sealed class Result<failureType, successType>
+import java.io.Serializable
+
+sealed class Result<failureType, successType> : Serializable
 
 data class Success<failureType, successType>(
         val content: successType
